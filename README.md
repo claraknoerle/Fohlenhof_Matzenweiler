@@ -1,55 +1,55 @@
-# Universal WebPy App Project Template
+# Fohlenhof Matzenweiler
 
-**Eine produktionsreife Vorlage für moderne Webanwendungen** mit Full-Stack-Technologien, professioneller Dokumentation und Best Practices.
+**Webprojekt für den Fohlenhof in Kißlegg im Allgäu** - Eine moderne Webanwendung mit Full-Stack-Technologien für die Präsentation und Verwaltung des Hofes.
 
-> Für schulische und kommerzielle Informatik-Projekte
+> Für Live-Entwicklung und Testing im GitHub Codespace
 
 ---
 
-## 📋 Systemanforderungen (Pflichtenheft)
+## 📋 Überblick
 
-### Kernanforderungen
-Das System implementiert folgende **zentrale Anforderungen**:
+Das System implementiert eine **vollständige Webpräsenz** für den Fohlenhof Matzenweiler mit folgenden Kernfunktionen:
 
-| Anforderung | Status | Details |
-|-------------|--------|---------|
-| **Webbasierte Appanwendung** | ✅ | Responsive & Mobile-optimiert (React, JavaScript, PHP) |
-| **Redundanzfreies System** | ✅ | App und Repo (DRY-Prinzip), keine Copy-Paste |
-| **Lückenlose Dokumentation** | ✅ | [Handbuch](docs/handbuch/) & [Pflichtenheft](docs/handbuch/PFLICHTENHEFT.md) |
-| **Sicherheit** | ✅ | Application Security & Betriebssicherheit |
-| **OOP-Prinzipien** | ✅ | Abstraktion, Vererbung, Kapselung, Polymorphie |
-| **Wiederverwendbarkeit** | ✅ | APIs & eigene Libraries |
-| **Zerlegung (Divide & Conquer)** | ✅ | Modulare Architektur |
-| **Erweiterbarkeit** | ✅ | Modulares Design, Objektorientiert |
-| **Machbarkeit** | ✅ | Testbare Einheiten (Unit Tests) |
-| **Wartbarkeit** | ✅ | Keine Redundanz, Backup-System, Best Practices |
-| **Automatisierung** | ✅ | Routinen für alle Prozesse |
-| **Persistenz** | ✅ | Datenbankoperationen & Lebensdauer-Management |
-| **MVC-Architektur** | ✅ | Modell-View-Controller durchgängig |
-| **Best Practices** | ✅ | Für alle Entwicklungsschritte |
-| **Live-Testumgebung** | ✅ | Permanent verfügbar (Docker Compose) |
+| Feature | Status | Details |
+|---------|--------|---------|
+| **Responsive Website** | ✅ | PHP-basiert, mobile-optimiert |
+| **Kostenrechner** | ✅ | Mit Datenbankanbindung für Berechnungen |
+| **Bildergalerie** | ✅ | Automatische Anzeige von Hof-Bildern |
+| **Datenbankintegration** | ✅ | MySQL mit normalisierter Struktur |
+| **API-Backend** | ✅ | Python Flask für Datenverarbeitung |
+| **Docker-Umgebung** | ✅ | Vollständige Containerisierung |
+| **Live-Entwicklung** | ✅ | Permanente Testumgebung im Codespace |
+
+---
+
+## 🚀 Schnellstart
+
+Für eine **schnelle Einrichtung und Live-Entwicklung** im Codespace folgen Sie der [Live-Entwicklung-Anleitung](docs/anleitungen/live-entwicklung-anleitung.md).
+
+### Kurzanleitung:
+1. `./scripts/bootstrap.sh` (Umgebung initialisieren)
+2. `.env` bearbeiten (Passwörter setzen)
+3. `./scripts/start-services.sh` (Dienste starten)
+4. **Testen**: http://localhost:8080/Projekt_Fohlenhof%20Matzenweiler/
 
 ---
 
 ## 🏗️ Architektur
 
 ```
-Frontend (React/JavaScript/PHP - responsive)
+PHP-Webapp (Frontend - responsive)
     ↓
-API Layer (Python Flask/FastAPI - RESTful)
+Python-API (Backend - RESTful)
     ↓
-Service Layer (Python/Java - Business Logic)
-    ↓
-Data Layer (MySQL - Persistent Storage)
+MySQL-Datenbank (Persistent Storage)
 ```
 
 **Technologie-Stack:**
-- 🐍 Python (API & Backend)
-- ☕ Java (Business Logic & Desktop)
-- 🌐 JavaScript/React (Frontend)
-- 🐘 PHP (Web Views)
+- 🌐 PHP (Web-Frontend mit MVC)
+- 🐍 Python Flask (API-Backend)
+- 🐘 MySQL (Datenbank)
+- 🐳 Docker (Containerisierung)
 - 💾 MySQL (Datenbank)
-- 🐳 Docker (Container & Deployment)
 
 ---
 
@@ -59,42 +59,38 @@ Data Layer (MySQL - Persistent Storage)
 
 | Dokument | Beschreibung |
 |----------|-------------|
-| [PFLICHTENHEFT.md](docs/handbuch/PFLICHTENHEFT.md) | ⭐ **Systemanforderungen & Spezifikationen** |
+| [Live-Entwicklung-Anleitung](docs/anleitungen/live-entwicklung-anleitung.md) | ⭐ **Schnellstart & Testumgebung** |
+| [PFLICHTENHEFT.md](docs/handbuch/PFLICHTENHEFT.md) | Systemanforderungen & Spezifikationen |
 | [ARCHITEKTUR.md](docs/handbuch/ARCHITEKTUR.md) | Technische Architektur & Diagramme |
 | [Handbuch Index](docs/handbuch/INDEX.md) | Übersicht aller Dokumentationen |
-| [README.md](docs/handbuch/README.md) | Quick-Start & Übersicht |
-| [legacy-analysis/README.md](legacy-analysis/README.md) | 🔒 **Legacy-Code Analyse** (Upload & Analyse) |
 
 ---
 
-## � Legacy-System Analyse
+## 🛠️ Entwicklung
 
-Das Projekt enthält ein **gesichertes Upload-Verzeichnis** für die Analyse von Legacy-Code:
-
-| Bereich | Beschreibung |
-|---------|-------------|
-| **Upload** | [`/legacy-analysis/`](legacy-analysis/README.md) — 🔒 Geschützt, wird nicht committed |
-| **Dokumentation** | [`/docs/handbuch/legacy-analysis/`](docs/handbuch/legacy-analysis/README.md) — Analyseergebnisse (committed) |
-
-**Workflow:**
-1. Quellcode in `/legacy-analysis/` hochladen
-2. Analysieren und verstehen
-3. Ergebnisse in `/docs/handbuch/legacy-analysis/` dokumentieren
-4. Quellcode-Upload nach Fertig löschen
-
-Siehe [legacy-analysis/README.md](legacy-analysis/README.md) für Details.
-
----
-
-### 1. Repository klonen
-```bash
-git clone https://github.com/ChristineJanischek/universal-webpy-app-project-template.git
-cd universal-webpy-app-project-template
+### Projektstruktur
+```
+├── docker-compose.yml          # Dienst-Orchestrierung
+├── scripts/                    # Hilfsskripte
+├── services/python-api/        # Python-Backend
+├── webapp/public/              # PHP-Frontend
+├── docker/mysql/init/          # Datenbank-Schema
+└── docs/                       # Dokumentation
 ```
 
-### 2. Abhängigkeiten installieren
+### Lokale Entwicklung
+1. Repository klonen
+2. `./scripts/bootstrap.sh` ausführen
+3. `.env` konfigurieren
+4. `./scripts/start-services.sh` starten
+5. Entwickeln & testen!
+
+### Qualitätsgates
+Vor jedem Commit:
 ```bash
-bash scripts/bootstrap.sh
+./scripts/validate-security.sh
+./scripts/validate-architecture.sh
+./scripts/validate-docs.sh
 ```
 
 ### 3. Services starten
@@ -102,50 +98,40 @@ bash scripts/bootstrap.sh
 bash scripts/start-services.sh
 ```
 
-### 4. Services im Browser öffnen
-- **Web Frontend:** http://localhost:8000
-- **Python API:** http://localhost:5000
+### Services testen
+- **PHP-Webapp:** http://localhost:8080/Projekt_Fohlenhof%20Matzenweiler/
+- **Python-API:** http://localhost:8000/health
 - **MySQL:** localhost:3306
 
 ---
 
-## ✅ Quality Gates
+## ✅ Qualitätsgates
 
-Alle Anforderungen müssen die täglichen Validierungen bestehen:
+Alle Änderungen müssen die Validierungen bestehen:
 
 ```bash
-# Security Checks
-bash scripts/validate-security.sh
+# Sicherheitsprüfung
+./scripts/validate-security.sh
 
-# Architecture Checks
-bash scripts/validate-architecture.sh
+# Architekturprüfung
+./scripts/validate-architecture.sh
 
-# Documentation Checks
-bash scripts/validate-docs.sh
+# Dokumentationsprüfung
+./scripts/validate-docs.sh
 ```
-
-**Prüfkriterien:**
-- ✅ Keine Secrets im Repo
-- ✅ Keine Code-Duplikate
-- ✅ Alle Anforderungen dokumentiert
-- ✅ Tests bestanden
-- ✅ Security-Standards erfüllt
 
 ---
 
-## 📦 Verzeichnisstruktur
+## 📦 Projektstruktur
 
 ```
-├── src/                          # Java Source Code & Domänen
-├── services/python-api/          # Python API Service
-├── webapp/                       # Web Frontend (React/PHP/JS)
-├── docs/handbuch/                # Dokumentation
-│   └── PFLICHTENHEFT.md         # ⭐ Systemanforderungen
-├── legacy-analysis/              # 🔒 Gesichertes Upload-Verzeichnis
-│   └── README.md                 # Anleitung für Legacy-Code Analyse
-├── docker/                       # Docker Konfigurationen
-├── scripts/                      # Automation Scripts
-└── docker-compose.yml            # Service Orchestration
+├── webapp/public/Projekt_Fohlenhof Matzenweiler/  # PHP-Frontend (MVC)
+├── services/python-api/          # Python-Backend (Flask)
+├── docker/mysql/init/            # Datenbank-Schema
+├── scripts/                      # Automatisierungsskripte
+├── docs/handbuch/                # Detaillierte Dokumentation
+├── docs/anleitungen/             # Anleitungen
+└── docker-compose.yml            # Dienst-Orchestrierung
 ```
 
 ---

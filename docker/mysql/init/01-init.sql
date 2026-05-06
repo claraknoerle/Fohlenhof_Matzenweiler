@@ -6,3 +6,12 @@ CREATE TABLE IF NOT EXISTS demo_items (
 
 INSERT INTO demo_items (title)
 VALUES ('Erster Eintrag'), ('Zweiter Eintrag'), ('Dritter Eintrag');
+
+CREATE TABLE IF NOT EXISTS berechnungen (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  alter INT NOT NULL,
+  dauer INT NOT NULL,
+  zukunftsalter INT NOT NULL,
+  gesamtkosten DECIMAL(10,2) NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

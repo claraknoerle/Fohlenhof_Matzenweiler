@@ -1,0 +1,282 @@
+/* ===================================
+   Zentrale Ausrichtung & Layout
+   =================================== */
+   
+html, body {
+    color: #c27348; /* Standardtextfarbe: Braun/Orange */
+    background-color: #000000; /* Hintergrundfarbe schwarz */
+    font-family: "Arial", sans-serif; /* Schriftart */
+    margin: 0; /* Entfernt Standard-Margin */
+    padding: 0; /* Entfernt Standard-Padding */
+    text-align: center; /* Zentriert Texte standardmäßig */
+}
+
+/* Container-Zentrierung für den gesamten Inhalt */
+main, header, footer {
+    max-width: 1000px; /* Begrenzt die Breite auf Desktops */
+    margin: 0 auto;    /* Das Geheimnis für die horizontale Zentrierung */
+    padding: 20px; /* Innenabstand */
+}
+
+.content {
+	margin: 0 auto ;/* Das Geheimnis für die horizontale Zentrierung */
+}
+
+/* ===================================
+   Tabelle
+   =================================== */
+
+.table-container {
+    max-width: 900px; /* Maximalbreite */
+    margin: 0 auto;/* Das Geheimnis für die horizontale Zentrierung */
+    background: #000000; /* Schwarzer Hintergrund */
+    padding: 20px; /* Innenabstand */
+    border-radius: 8px; /* Abgerundete Ecken */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Leichter Schatten */
+}
+
+.container {
+    max-width: 600px; /* Maximalbreite */
+    margin: 0 auto; /* Zentriert horizontal */
+    background: #3b3b3b; /* Dunkelgrauer Hintergrund */
+    padding: 20px; /* Innenabstand */
+    border-radius: 8px; /* Abgerundete Ecken */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Schatten */
+}
+
+table {
+     width: 100%; /* Tabelle füllt Container */
+    border-collapse: collapse; /* Vermeidet doppelte Rahmen */
+    margin: center;/* Zentriert horizontal */
+}
+
+th {
+    background-color: #3b3b3b; /* Dunkelgrau */
+    color:#c27348; /* Textfarbe Braun/Orange */
+    text-align: left; /* Text linksbündig */
+    padding: 12px; /* Innenabstand */
+    font-size: 16px; /* Schriftgröße */
+}
+
+td {
+    padding: 12px; /* Innenabstand */
+    border-bottom: 1px solid #c27348; /* Untere Linie */
+    font-size: 14px; /* Schriftgröße */
+}
+
+.price-tag {
+   font-weight: bold; /* Fett für Preise */
+    color: #c27348; /* Orange für Hervorhebung */
+    white-space: nowrap; /* Keine Zeilenumbrüche */
+}
+
+.badge {
+    font-size: 0.85em; /* Etwas kleinere Schrift */
+    padding: 4px 8px; /* Innenabstand */
+    border-radius: 4px; /* Abgerundete Ecken */
+    color: #c27348; /* Braun/Orange */
+}
+
+small {
+    font-size: 12px; /* Kleine Schrift */
+    color: #c27348; /* Braun/Orange */
+}
+
+/* ===================================
+   Header & Logo
+   =================================== */
+   
+.header-title {
+    display: flex; /* Flexbox für Ausrichtung */
+    flex-direction: column; /* Logo über Text */
+    align-items: center; /* Zentriert Inhalte horizontal */
+    gap: 10px; /* Abstand zwischen Logo und Text */
+}
+
+.logo-img {
+   height: 180px; /* Höhe des Logos */
+   width: auto; /* Breite automatisch proportional */
+}
+
+/* ===================================
+   Navigation & Toggle System
+   =================================== */
+   
+.navigation {
+    background-color: #c27348; /* Hintergrundfarbe Navigation */
+    margin-top: 20px; /* Abstand nach oben */
+}
+
+/* Menü-Liste (Desktop: nebeneinander) */
+#menu {
+    list-style: none; /* Entfernt Standard-Aufzählungszeichen */
+    padding: 0; /* Entfernt Padding */
+    display: flex; /* Horizontale Menüanordnung */
+    justify-content: center; /* Zentriert Menüpunkte */
+}
+
+#menu li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    display: block;
+    font-weight: bold;
+}
+
+/* Toggle-Elemente verstecken */
+#menu-toggle, .hamburger {
+    display: none; /* Auf Desktops unsichtbar */
+}
+
+/* ===================================
+   Rechner
+   =================================== */
+/* Container (dein Kasten) */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #3b3b3b;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Formular */
+.rechner-form {
+    position: relative;
+    top: 50px;
+}
+
+/* Labels (Überschriften wie "Aktuelles Alter") */
+.rechner-form label {
+    font-size: 30px;
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+    color: #ff914d; /* passt zu deinem Orange */
+}
+
+/* Eingabefelder */
+.rechner-form input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    margin-top: 8px;
+    font-size: 18px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* Button */
+.rechner-form button {
+    display: block;
+    margin: 25px auto;
+    padding: 12px 25px;
+    font-size: 20px;
+    background-color: #c27348;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Hover Effekt */
+.rechner-form button:hover {
+    background-color: #d35400;
+}
+
+/* Ergebnis */
+.result {
+    margin-top: 20px;
+    font-size: 18px;
+    color: white;
+}
+/* ===================================
+   Footer
+   =================================== */
+   
+/* Footer Styles */
+.main-footer {
+    background-color: #000000; /* Schwarz */
+    color: #c27348; /* Braun/Orange */
+    padding: 40px 20px; /* Innenabstand */
+    border-top: 1px solid #c27348; /* Oberer Rahmen */
+    text-align: left; /* Links ausgerichtet */
+}
+
+.footer-container {
+    display: flex; /* Flexbox für Footer-Sektionen */
+    justify-content: space-between; /* Abstand zwischen Sektionen */
+    align-items: flex-start; /* Oben ausgerichtet */
+    max-width: 1000px; /* Maximalbreite */
+    margin: 0 auto; /* Zentriert horizontal */
+    gap: 20px; /* Abstand zwischen Sektionen */
+}
+
+.footer-section {
+    flex: 1; /* Gleiche Breite für Sektionen */
+}
+
+.footer-section.right {
+    text-align:left; /* Text linksbündig */
+}
+
+.footer-section h2, 
+.footer-section h3 {
+    color: #c27348; /* Braun/Orange */
+    margin-top: 0; /* Kein oberer Abstand */
+}
+
+.footer-section p {
+    margin: 5px 0; /* Abstand zwischen Absätzen */
+}
+
+.footer-link {
+    color: #c27348; /* Linkfarbe */
+    text-decoration: none; /* Keine Unterstreichung */
+    transition: opacity 0.3s; /* Weiche Hover-Animation */
+}
+
+.footer-link:hover {
+    opacity: 0.7; /* Leicht transparent beim Hover */
+}
+
+.social-icons {
+    margin-top: 15px; /* Abstand nach oben */
+}
+
+.instagram-icon {
+    width: 40px; /* Breite Icon */
+    height: 40px; /* Höhe Icon */
+}
+
+.footer-menu {
+    list-style: none; /* Keine Aufzählungszeichen */
+    padding: 0; /* Innenabstand*/
+    margin: 0; /* Abstand zwischen Absätzen */
+}
+
+.footer-menu li {
+    margin-bottom: 8px;/* Abstand zwischen Links */
+}
+.footer-bottom {
+	text-align: center; /* Zentriert Footer-Bereich */
+}
+.footer-bottom a {
+	text-align: center;		/* Text zentriert */
+    color: #c27348;          /* Dein Braun/Orange-Ton */
+    text-decoration: none;   /* Entfernt den Unterstrich */
+    margin: 0 10px;          /* Gibt den Links etwas Abstand zueinander */
+    font-size: 0.9em;        /* Macht sie dezent kleiner */
+    transition: opacity 0.3s; /* Weiche Animation beim Hover */
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline; /* Optional: Unterstreichen nur beim Drüberfahren */
+    opacity: 0.8; /* Leicht transparent */
+}
+
+/* Falls du die Punkte zwischen den Links weg haben willst */
+.footer-legal-links {
+    margin-top: 10px; /* Abstand nach oben */
+}
