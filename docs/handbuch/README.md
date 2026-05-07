@@ -49,9 +49,8 @@ ls routinen/langfristig/        # Jährlich/Strategisch
 ## 📖 Dokumentation
 
 ### 🧪 Live-Tests & Anleitungen
+- **[anleitungen/live-test-dashboard.md](anleitungen/live-test-dashboard.md)** - Live-Test Dashboard mit PHP + Python-API + MySQL Integration
 - **[anleitungen/java-live-test.md](anleitungen/java-live-test.md)** - Java-App testen: Headless-Test im Codespace & GUI lokal starten
-
-> 🛠️ Zuletzt aktualisiert: PHP-Proxy für Python-API hinzugefügt, um API-Aufrufe im Live-Test Dashboard zuverlässig auch in Remote-Umgebungen zu erlauben.
 
 > 🛠️ Zuletzt aktualisiert: Verbesserter API-URL-Fallback in Webapp/Javascript, damit der Aufruf der Python-API nicht mehr mit `Failed to fetch` scheitert.
 
