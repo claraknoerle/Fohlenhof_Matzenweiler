@@ -1,0 +1,105 @@
+@CHARSET "UTF-8";
+
+/*Benutzerdefinierte Box (Klasse)*/
+.gallery{
+	display: flex;/* Flexbox-Layout aktivieren */	
+	justify-content: center;/* Platz zwischen den Spalten aufteilen */
+	gap: 15px;/* Abstand zwischen den Bildern */
+	padding: 20px; /* Innenabstand */
+	flex-wrap: wrap; /* Hier wird der Umbruch aktiviert */
+}
+
+.gallery a{
+	display: block;/*Display: Blockelement*/
+}
+
+.gallery img{
+	transition: 1s;	/* Transition/Verzögerung für weiche Übergänge */
+	-moz-transition: 1s;/*Transition (Eigenschaftswechsel) für den Firefox: 1 Sekunde*/
+	-o-transition: 1s;/*Transition (Eigenschaftswechsel) für den Opera: 1 Sekunde*/
+	-webkit-transition: 1s;/*Transition (Eigenschaftswechsel) für den Chrome/Safarie: 1 Sekunde*/	
+	background-color: black;/*Hindergrundfarbe*/	
+	padding: 5px;/*Innenabstand*/
+	-moz-border-radius: 5px; /*Rahmen-Radius für abgerudete Ecken 5 Pixel für Firefox*/  
+	-webkit-border-radius: 5px; /*Rahmen-Radius für abgerudete Ecken 5 Pixel für Safari und Chrome*/
+	box-shadow: 2px 2px 7px rgba(100, 100, 100, 0.5);/* Schattierung mit Versatz und Übergang mit rgb Farbangabe*/
+	-moz-box-shadow: 2 2 7px rgba(100,100,100,0.5); /* Firefox-Schatten: horizontal 2px, vertikal 2px, Unschärfe 7px, halbtransparent grau */
+	-webkit-box-shadow: 2 2 7px rgba(100,100,100,0.5); /* Webkit-Schatten für Safari/Chrome */
+	max-width: 100%; /* Element nicht breiter als Container */
+	width: 190px; /* feste Breite */
+	height: 170px; /* feste Höhe */
+	object-fit: cover; /* Bild proportional zuschneiden, Container füllen */
+	cursor: pointer; /* Mauszeiger zeigt Klickbarkeit */
+}
+/* Grundlayout: 2 Spalten nebeneinander */
+.galerie {
+    display: grid; /* Rasterlayout */
+    grid-template-columns: 1fr 1fr; /* genau zwei gleich große Spalten */
+    gap: 10px; /* Abstand zwischen Bildern */
+    padding: 10px; /* Abstand vom Rand */
+}
+ 
+/* Standard-Aussehen der Bilder im Raster */
+img {
+    width: 100%; /* Bild füllt Container horizontal */
+    height: 300px; /* feste Höhe */
+    object-fit: cover; /* Bild proportional zuschneiden */
+    cursor: pointer; /* anklickbar */
+    border-radius: 5px; /* abgerundete Ecken */
+    transition: transform 0.2s; /* Animation bei Transformation */
+}
+ 
+/* Stil für das vergrößerte Bild */
+.zoom {
+    top: 0; /* oben ausrichten */
+    left: 0; /* links ausrichten */
+    width: 500px; /* vergrößert */
+    height: auto; /* Höhe proportional */
+    object-fit: contain; /* ganzes Bild sichtbar, kein Beschnitt */
+    background-color: rgba(0,0,0,0.9); /* dunkler Hintergrund */
+    z-index: 1000; /* über anderen Elementen */
+    border-radius: 0; /* keine abgerundeten Ecken */
+}
+ /* Das Bild im normalen Zustand */
+.bild {
+            width: 300px;
+            cursor: pointer;
+            transition: width 0.3s; /* Macht die Vergrößerung flüssig */
+        }
+ 
+        /* Das Bild, wenn es die Klasse "gross" hat */
+        .gross {
+            width: 800px;
+        }
+/* ===================================
+   Bilder-Galerie zentrieren
+   =================================== */
+/* Galerie Grid */
+.gallery {
+    display: flex; /* Flexbox */
+    flex-wrap: wrap; /* Zeilenumbruch */
+    justify-content: center; /* horizontal zentriert */
+    gap: 10px; /* Abstand zwischen Bildern */
+    padding: 20px; /* Innenabstand */
+}
+.gallery img {
+   object-fit: cover; /* Verhindert Verzerrung */
+}
+
+
+.gallery-item img {
+   width: 200px; /* feste Breite */
+    height: 200px; /* feste Höhe */
+    object-fit: cover; /* Bild proportional */
+    border: 2px solid #c27348; /* Rahmenfarbe */
+    transition: transform 0.3s ease; /* sanfte Hover-Animation */
+    cursor: pointer; /* anklickbar */
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05); /* Leichte Vergrößerung beim Hover */
+}
+
+
+
+

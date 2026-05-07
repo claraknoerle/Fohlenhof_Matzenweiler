@@ -1,14 +1,13 @@
 const output = document.getElementById("apiOutput");
 const btn = document.getElementById("refreshBtn");
-const defaultApiBaseUrl = `${window.location.protocol}//${window.location.hostname}:8000`;
-const apiBaseUrl = window.PYTHON_API_URL || defaultApiBaseUrl;
+const apiProxyUrl = "/api.php";
 
 async function loadStatus() {
   output.textContent = "Lade...";
   try {
     const [healthResp, jsonResp] = await Promise.all([
-      fetch(`${apiBaseUrl}/health`, { mode: "cors" }),
-      fetch(`${apiBaseUrl}/json-items`, { mode: "cors" }),
+      fetch(`${apiProxyUrl}?endpoint=health`),
+      fetch(`${apiProxyUrl}?endpoint=json-items`),
     ]);
 
     if (!healthResp.ok || !jsonResp.ok) {
@@ -27,7 +26,7 @@ async function loadStatus() {
 
     output.textContent = JSON.stringify({ health, jsonData }, null, 2);
   } catch (err) {
-    output.textContent = `Fehler beim API-Aufruf (${apiBaseUrl}): ${err.message}`;
+    output.textContent = `Fehler beim API-Aufruf (${apiProxyUrl}): ${err.message}`;
   }
 }
 
