@@ -4,7 +4,10 @@ $mysqlPort = getenv('MYSQL_PORT') ?: '3306';
 $mysqlDb = getenv('MYSQL_DATABASE') ?: 'appdb';
 $mysqlUser = getenv('MYSQL_USER') ?: 'appuser';
 $mysqlPass = getenv('MYSQL_PASSWORD') ?: 'apppassword';
-$pythonApiUrl = getenv('PYTHON_API_URL') ?: 'http://localhost:8000';
+$scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
+$defaultApiHost = preg_replace('/:\d+$/', '', $_SERVER['HTTP_HOST'] ?? 'localhost');
+$defaultPythonApiUrl = sprintf('%s://%s:8000', $scheme, $defaultApiHost);
+$pythonApiUrl = getenv('PYTHON_API_URL') ?: $defaultPythonApiUrl;
 
 $mysqlMessage = 'Nicht getestet';
 
