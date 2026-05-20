@@ -191,6 +191,28 @@ button:hover {
     color: #222;
 }
 
+/* Kleinere Variante des Rechners: schmaler, kompakter */
+.rechner-form.container {
+    max-width: 440px; /* kleiner als die allgemeine container-Breite */
+    padding: 14px;
+}
+.rechner-form input[type="number"], .rechner-form button {
+    font-size: 15px;
+    padding: 8px 10px;
+    margin: 8px 0;
+}
+.rechner-form .result-card {
+    font-size: 14px;
+    padding: 10px;
+}
+
+@media (max-width: 480px) {
+    .rechner-form.container {
+        max-width: 92%;
+        padding: 10px;
+    }
+}
+
 .result-card {
     background: linear-gradient(180deg, #2b2b2b 0%, #1f1f1f 100%);
     color: #f5e6dc;
