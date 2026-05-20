@@ -298,6 +298,10 @@ Bei 100+ Routinen:
 
 - **Anzahl Routinen** (gesamt, pro Kategorie)
 - **Redundanz-Index** (% Redundanzen)
+
+## Changelog (handbuch-bezogene Änderungen)
+
+- 20.05.2026: UI-Update am Kostenrechner — `views/RechnerView.php` überarbeitet; neue Client-Logik `webapp/public/js/rechner.js` hinzugefügt; ergänzende Styles in `webapp/public/css/styles.css`. Kurzbeschreibung und Begründung wurden in `docs/VERTEIDIGUNG.md` dokumentiert.
 - **Wartbarkeits-Index** (Durchschnittsgröße, Komplexität)
 - **Abdeckungs-Rate** (Geplante vs. dokumentierte Routinen)
 - **Update-Häufigkeit** (Aktualität)

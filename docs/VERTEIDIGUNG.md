@@ -394,4 +394,11 @@ Analyse:
 
 ---
 
+### Aktualisierung: Kostenrechner (UI & Verhalten)
+
+- Datum: 20.05.2026
+- Änderung: `views/RechnerView.php` überarbeitet — modernes, zugängliches Formular (`number`-Inputs, Labels), client-seitige Validierung und Sofortberechnung mit `js/rechner.js`, sowie ergänzende Styles in `css/styles.css` (Klassen: `.rechner-form`, `.form-row`, `.result-card`).
+- Begründung: Bessere Usability, sofortiges Feedback für Nutzer*innen, und bessere Barrierefreiheit (Labels, aria-live).
+
+
 **Diese Verteidigungsvorbereitung ist bis zur Präsentation gültig (Juni 2026).**
