@@ -302,6 +302,8 @@ Bei 100+ Routinen:
 ## Changelog (handbuch-bezogene Änderungen)
 
 - 20.05.2026: UI-Update am Kostenrechner — `views/RechnerView.php` überarbeitet; neue Client-Logik `webapp/public/js/rechner.js` hinzugefügt; ergänzende Styles in `webapp/public/css/styles.css`. Kurzbeschreibung und Begründung wurden in `docs/VERTEIDIGUNG.md` dokumentiert.
+- 20.05.2026 (später): Kostenrechner-Logik korrigiert — Berechnung läuft jetzt von **aktuellem Alter** des Fohlens bis **Zielalter am Ende der Aufzucht**, nicht vom Grundprinzip "Dauer von Geburt". Model: `RechnerModel.php` (berechneGesamtkosten: `(zielalter - alter) * 12 * 300€`), View-Labels umbenannt, JS-Validierung angepasst. Rechner visuell kompakter gemacht (max-width: 380px).
+
 - **Wartbarkeits-Index** (Durchschnittsgröße, Komplexität)
 - **Abdeckungs-Rate** (Geplante vs. dokumentierte Routinen)
 - **Update-Häufigkeit** (Aktualität)

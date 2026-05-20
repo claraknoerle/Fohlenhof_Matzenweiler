@@ -193,23 +193,26 @@ button:hover {
 
 /* Kleinere Variante des Rechners: schmaler, kompakter */
 .rechner-form.container {
-    max-width: 440px; /* kleiner als die allgemeine container-Breite */
-    padding: 14px;
+    max-width: 380px; /* noch kleiner */
+    padding: 12px;
 }
 .rechner-form input[type="number"], .rechner-form button {
-    font-size: 15px;
-    padding: 8px 10px;
-    margin: 8px 0;
+    font-size: 14px;
+    padding: 7px 9px;
+    margin: 6px 0;
+}
+.rechner-form label {
+    font-size: 13px;
 }
 .rechner-form .result-card {
-    font-size: 14px;
-    padding: 10px;
+    font-size: 13px;
+    padding: 8px;
 }
 
 @media (max-width: 480px) {
     .rechner-form.container {
-        max-width: 92%;
-        padding: 10px;
+        max-width: 90%;
+        padding: 8px;
     }
 }
 

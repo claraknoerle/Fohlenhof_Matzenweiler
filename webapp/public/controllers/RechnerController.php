@@ -12,23 +12,23 @@ class RechnerController {
 
     public function starten() {
         $alter = "";
-        $dauer = "";
-        $zukunftsalter = "";
+        $zielalter = "";
+        $endAlter = "";
         $gesamtkosten = "";
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $alter = floatval($_POST['alter']);
-            $dauer = floatval($_POST['dauer']);
+            $zielalter = floatval($_POST['zielalter']);
 
-            $model = new RechnerModel($alter, $dauer);
-            $zukunftsalter = $model->berechneZukunftsalter();
+            $model = new RechnerModel($alter, $zielalter);
+            $endAlter = $model->berechneZukunftsalter();
             $gesamtkosten = $model->berechneGesamtkosten();
         }
 
-        $this->view->zeigeFormular($alter, $dauer);
+        $this->view->zeigeFormular($alter, $zielalter);
 
-        if ($zukunftsalter !== "" && $gesamtkosten !== "") {
-            $this->view->zeigeErgebnisse($zukunftsalter, $gesamtkosten);
+        if ($endAlter !== "" && $gesamtkosten !== "") {
+            $this->view->zeigeErgebnisse($endAlter, $gesamtkosten);
         }
     }
 }

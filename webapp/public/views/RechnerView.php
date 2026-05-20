@@ -1,16 +1,16 @@
 <?php
 class RechnerView {
-    public function zeigeFormular($alter = "", $dauer = "") {
+    public function zeigeFormular($alter = "", $zielalter = "") {
         echo '
         <div class="container rechner-form">
             <form id="rechner-form" method="post" novalidate>
                 <div class="form-row">
-                    <label for="alter">Aktuelles Alter (in Jahren)</label>
+                    <label for="alter">Aktuelles Alter des Fohlens (in Jahren)</label>
                     <input type="number" id="alter" name="alter" value="'.htmlspecialchars($alter).'" step="0.1" min="0" placeholder="z.B. 0.5" required>
                 </div>
                 <div class="form-row">
-                    <label for="dauer">Dauer der Aufzucht (in Jahren)</label>
-                    <input type="number" id="dauer" name="dauer" value="'.htmlspecialchars($dauer).'" step="0.1" min="0" placeholder="z.B. 3" required>
+                    <label for="zielalter">Zielalter am Ende der Aufzucht (in Jahren)</label>
+                    <input type="number" id="zielalter" name="zielalter" value="'.htmlspecialchars($zielalter).'" step="0.1" min="0" placeholder="z.B. 3" required>
                 </div>
                 <div class="form-row">
                     <button type="submit" id="rechner-submit">Jetzt berechnen</button>
@@ -23,10 +23,10 @@ class RechnerView {
         ';
     }
 
-    public function zeigeErgebnisse($zukunftsalter, $gesamtkosten) {
+    public function zeigeErgebnisse($zielalter, $gesamtkosten) {
         $k = number_format($gesamtkosten, 2, ',', '.');
         echo "<div id=\"server-result\" class=\"result\">";
-        echo "<p><strong>Zukunftsalter:</strong> $zukunftsalter Jahre</p>";
+        echo "<p><strong>Aufzucht bis Alter:</strong> $zielalter Jahre</p>";
         echo "<p><strong>Gesamtkosten:</strong> $k €</p>";
         echo "</div>";
     }

@@ -2,22 +2,26 @@
 <?php
 class RechnerModel {
     public $alter;
-    public $dauer;
+    public $zielalter;
     public $preisProMonat = 300;
 
-    public function __construct($alter, $dauer) {
+    public function __construct($alter, $zielalter) {
         $this->alter = $alter;
-        $this->dauer = $dauer;
+        $this->zielalter = $zielalter;
     }
 
     public function berechneZukunftsalter() {
-        // Alter nach Dauer
-        return $this->alter + $this->dauer;
+        // Das Zielalter der Aufzucht
+        return $this->zielalter;
     }
 
     public function berechneGesamtkosten() {
-        // Dauer in Monaten * Preis
-        return $this->dauer * 12 * $this->preisProMonat;
+        // Kosten: von aktuellem Alter bis Zielalter
+        $aufzuchtdauer = $this->zielalter - $this->alter;
+        if ($aufzuchtdauer < 0) {
+            return 0; // Zielalter darf nicht vor aktuellem Alter liegen
+        }
+        return $aufzuchtdauer * 12 * $this->preisProMonat;
     }
 }
 ?>
