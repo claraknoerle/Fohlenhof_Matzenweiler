@@ -126,13 +126,13 @@ $angebote = [
     <h3>Bilder</h3>
     <div class="galerie">
         <?php
-        $bilder = glob("bild/*.jfif"); // Alle Bilder aus Ordner laden
+        $bilder = glob("images/*.jfif"); // Alle Bilder aus Ordner laden
         if($bilder){
             foreach($bilder as $bild){
                 echo '<img src="'.$bild.'" onclick="this.classList.toggle(\'zoom\')">'; // Klick = vergrößern
             }
         } else {
-            echo "<p>Keine .jfif Bilder im Ordner 'Bild' gefunden.</p>";
+            echo "<p>Keine .jfif Bilder im Ordner 'images' gefunden.</p>";
         }
         ?>
     </div>

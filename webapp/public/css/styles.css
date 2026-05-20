@@ -131,66 +131,45 @@ small {
 /* ===================================
    Rechner
    =================================== */
-/* Container (dein Kasten) */
+
 .container {
-    max-width: 600px;
-    margin: 0 auto;
-    background: #3b3b3b;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    max-width: 600px; /* Maximalbreite */
+    margin: 0 auto; /* Zentriert horizontal */
+    background: #3b3b3b; /* Dunkelgrau */
+    padding: 20px; /* Innenabstand */
+    border-radius: 8px; /* Abgerundete Ecken */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Schatten */
+}
+label{
+	front-size: 100px;
+}
+input, button {
+    padding: 10px; /* Innenabstand */
+    margin: 10px; /* Außenabstand */
+    font-size: 18px; /* Schriftgröße */
+    border-radius: 5px; /* Abgerundete Ecken */
+    border: 1px solid #ccc; /* Grauer Rahmen */
 }
 
-/* Formular */
-.rechner-form {
-    position: relative;
-    top: 50px;
+button {
+    background-color: #c27348; /* Braun/Orange */
+    color: white; /* Schriftfarbe */
+    cursor: pointer; /* Mauszeiger zeigt Klickbarkeit */
 }
 
-/* Labels (Überschriften wie "Aktuelles Alter") */
-.rechner-form label {
-    font-size: 30px;
-    font-weight: bold;
-    display: block;
-    margin-top: 15px;
-    color: #ff914d; /* passt zu deinem Orange */
+button:hover {
+    background-color: #d35400;/* Dunkleres Orange beim Hover */
 }
 
-/* Eingabefelder */
-.rechner-form input {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 12px;
-    margin-top: 8px;
-    font-size: 18px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-}
-
-/* Button */
-.rechner-form button {
-    display: block;
-    margin: 25px auto;
-    padding: 12px 25px;
-    font-size: 20px;
-    background-color: #c27348;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-/* Hover Effekt */
-.rechner-form button:hover {
-    background-color: #d35400;
-}
-
-/* Ergebnis */
 .result {
-    margin-top: 20px;
-    font-size: 18px;
-    color: white;
+    margin-top: 20px; /* Abstand nach oben */
+    font-size: 18px; /* Schriftgröße Ergebnis */
 }
+.rechner-form {
+    position: relative; /* oder fixed, falls du willst, dass es immer sichtbar bleibt */
+    top: 50px; 
+}
+
 /* ===================================
    Footer
    =================================== */

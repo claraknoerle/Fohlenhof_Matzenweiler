@@ -7,20 +7,20 @@ include ("header.php") // Lädt den sichtbaren Seitenkopf / Navigation//
 
     <?php
         // Deine Bild-Variable
-    $meinBild ="bild/Bild 1.jfif";   // Bild 1
-    $meinBild2 ="bild/Bild 2.jfif";  // Bild 2
-    $meinBild3 ="bild/Bild 3.jfif";  // Bild 3
-    $meinBild4 ="bild/Bild 4.jfif";  // Bild 4
-    $meinBild5 ="bild/Bild 5.jfif";  // Bild 5
-    $meinBild6 ="bild/Bild 6.jfif";  // Bild 6
-    $meinBild7 ="bild/Bild 7.jfif";  // Bild 7
-    $meinBild8 ="bild/Bild 8.jfif";  // Bild 8
-    $meinBild9 ="bild/Bild 9.jfif";  // Bild 9
-    $meinBild10 ="bild/Bild 10.jfif"; // Bild 10
-    $meinBild11 ="bild/Bild 11.jfif"; // Bild 11
-    $meinBild12 ="bild/Bild 12.jfif"; // Bild 12
-    $meinBild13 ="bild/Bild 13.jfif"; // Bild 13
-    $meinBild14 ="bild/Bild 14.jfif"; // Bild 14
+    $meinBild ="images/Bild 1.jfif";   // Bild 1
+    $meinBild2 ="images/Bild 2.jfif";  // Bild 2
+    $meinBild3 ="images/Bild 3.jfif";  // Bild 3
+    $meinBild4 ="images/Bild 4.jfif";  // Bild 4
+    $meinBild5 ="images/Bild 5.jfif";  // Bild 5
+    $meinBild6 ="images/Bild 6.jfif";  // Bild 6
+    $meinBild7 ="images/Bild 7.jfif";  // Bild 7
+    $meinBild8 ="images/Bild 8.jfif";  // Bild 8
+    $meinBild9 ="images/Bild 9.jfif";  // Bild 9
+    $meinBild10 ="images/Bild 10.jfif"; // Bild 10
+    $meinBild11 ="images/Bild 11.jfif"; // Bild 11
+    $meinBild12 ="images/Bild 12.jfif"; // Bild 12
+    $meinBild13 ="images/Bild 13.jfif"; // Bild 13
+    $meinBild14 ="images/Bild 14.jfif"; // Bild 14
 									
     ?>
  
