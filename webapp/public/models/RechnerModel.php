@@ -13,11 +13,13 @@ class RechnerModel {
         return $this->zielalter;
     }
 
-    public function berechneGesamtkosten(): float {
+    public function berechneAufzuchtdauer(): float {
         $aufzuchtdauer = $this->zielalter - $this->alter;
-        if ($aufzuchtdauer < 0) {
-            return 0.0;
-        }
+        return $aufzuchtdauer < 0 ? 0.0 : $aufzuchtdauer;
+    }
+
+    public function berechneGesamtkosten(): float {
+        $aufzuchtdauer = $this->berechneAufzuchtdauer();
         return $aufzuchtdauer * 12 * self::PREIS_PRO_MONAT;
     }
 }

@@ -121,7 +121,8 @@ $angebote = [
     $controller->starten();
     ?>
 </section>
-
+<p></p>
+<p></p>
 <section id="Bilder" class="content"> <!-- Galerie -->
     <h3>Bilder</h3>
     <div class="galerie">

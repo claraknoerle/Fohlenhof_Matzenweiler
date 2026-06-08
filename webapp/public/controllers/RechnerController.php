@@ -19,6 +19,7 @@ class RechnerController {
         $zielalter = $this->leseFloat('zielalter');
         $errors = [];
         $endAlter = null;
+        $aufzuchtdauer = null;
         $gesamtkosten = null;
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -27,6 +28,7 @@ class RechnerController {
             } else {
                 $model = new RechnerModel($alter, $zielalter);
                 $endAlter = $model->berechneZukunftsalter();
+                $aufzuchtdauer = $model->berechneAufzuchtdauer();
                 $gesamtkosten = $model->berechneGesamtkosten();
             }
         }
@@ -37,8 +39,8 @@ class RechnerController {
             $this->view->zeigeFehler($errors);
         }
 
-        if ($endAlter !== null && $gesamtkosten !== null) {
-            $this->view->zeigeErgebnisse($endAlter, $gesamtkosten);
+        if ($endAlter !== null && $aufzuchtdauer !== null && $gesamtkosten !== null) {
+            $this->view->zeigeErgebnisse($endAlter, $aufzuchtdauer, $gesamtkosten);
         }
     }
 }
