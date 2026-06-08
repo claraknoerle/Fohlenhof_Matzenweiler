@@ -10,13 +10,17 @@
 
 ## Geplante Änderungen
 
-1. `webapp/public/images/galerie/`
+1. `webapp/public/Projekt_Fohlenhof Matzenweiler/images/`, `img/`, `bilder/`, `assets/images/`, `assets/img/`
    - Verzeichnisstruktur für Bilder anlegen
    - Mindestens drei Bilder aufnehmen und optimieren
 
-2. `webapp/public/layouts/galerie.php`
+2. `webapp/public/Projekt_Fohlenhof Matzenweiler/layouts/galerie.php`
    - Neue Galerie-View mit `figure` und `figcaption`
    - Bildbeschreibung und Quelle einblenden
+
+3. `webapp/public/Projekt_Fohlenhof Matzenweiler/layouts/content.php`
+   - Galerie jetzt aus Standardbilder-Ordnern laden
+   - Display fallback für `images`, `img`, `bilder` und `bild`
 
 3. `webapp/public/css/galerie.css`
    - CSS Grid für responsive Galerie-Ansicht
@@ -24,6 +28,13 @@
 
 4. `webapp/public/layouts/nav.php`
    - Galerie-Link zur Navigation hinzufügen
+
+## Getätigte Änderungen
+
+- `webapp/public/Projekt_Fohlenhof Matzenweiler/images/`, `img/`, `bilder/`, `assets/images/` und `assets/img/` angelegt.
+- Je Ordner wurden mindestens drei Bilder aus `bild/` kopiert, damit `images/*`, `img/*`, `bilder/*`, `assets/images/*` und `assets/img/*` geprüft werden können.
+- `webapp/public/Projekt_Fohlenhof Matzenweiler/layouts/content.php` lädt jetzt Bilder aus den standardisierten Ordnern und zeigt sie mit `figure`/`figcaption` sowie Alt-Text an.
+- `webapp/public/Projekt_Fohlenhof Matzenweiler/layouts/galerie.php` wurde auf denselben flexiblen Bildlade-Mechanismus umgestellt.
 
 ## Tests
 

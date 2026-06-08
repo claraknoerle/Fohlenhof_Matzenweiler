@@ -1,33 +1,43 @@
-<?php include 'layouts/head.php';?>
 <?php
-require_once 'models/RechnerModel.php';
-require_once 'views/RechnerView.php';
+require_once __DIR__ . '/../models/RechnerModel.php';
+require_once __DIR__ . '/../views/RechnerView.php';
 
 class RechnerController {
-    private $view;
+    private RechnerView $view;
 
     public function __construct() {
         $this->view = new RechnerView();
     }
 
+    private function leseFloat(string $name): ?float {
+        $value = filter_input(INPUT_POST, $name, FILTER_VALIDATE_FLOAT);
+        return $value === false ? null : $value;
+    }
+
     public function starten() {
-        $alter = "";
-        $zielalter = "";
-        $endAlter = "";
-        $gesamtkosten = "";
+        $alter = $this->leseFloat('alter');
+        $zielalter = $this->leseFloat('zielalter');
+        $errors = [];
+        $endAlter = null;
+        $gesamtkosten = null;
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $alter = floatval($_POST['alter']);
-            $zielalter = floatval($_POST['zielalter']);
-
-            $model = new RechnerModel($alter, $zielalter);
-            $endAlter = $model->berechneZukunftsalter();
-            $gesamtkosten = $model->berechneGesamtkosten();
+            if ($alter === null || $zielalter === null) {
+                $errors[] = 'Bitte gib alter und Zielalter als gültige Zahlen ein.';
+            } else {
+                $model = new RechnerModel($alter, $zielalter);
+                $endAlter = $model->berechneZukunftsalter();
+                $gesamtkosten = $model->berechneGesamtkosten();
+            }
         }
 
-        $this->view->zeigeFormular($alter, $zielalter);
+        $this->view->zeigeFormular($alter ?? '', $zielalter ?? '');
 
-        if ($endAlter !== "" && $gesamtkosten !== "") {
+        if (!empty($errors)) {
+            $this->view->zeigeFehler($errors);
+        }
+
+        if ($endAlter !== null && $gesamtkosten !== null) {
             $this->view->zeigeErgebnisse($endAlter, $gesamtkosten);
         }
     }

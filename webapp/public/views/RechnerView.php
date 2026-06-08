@@ -23,10 +23,24 @@ class RechnerView {
         ';
     }
 
+    public function zeigeFehler(array $errors) {
+        if (empty($errors)) {
+            return;
+        }
+
+        echo '<div class="error-list">';
+        echo '<ul>';
+        foreach ($errors as $error) {
+            echo '<li>'.htmlspecialchars($error).'</li>';
+        }
+        echo '</ul>';
+        echo '</div>';
+    }
+
     public function zeigeErgebnisse($zielalter, $gesamtkosten) {
         $k = number_format($gesamtkosten, 2, ',', '.');
         echo "<div id=\"server-result\" class=\"result\">";
-        echo "<p><strong>Aufzucht bis Alter:</strong> $zielalter Jahre</p>";
+        echo "<p><strong>Aufzucht bis Alter:</strong> " . htmlspecialchars((string)$zielalter) . " Jahre</p>";
         echo "<p><strong>Gesamtkosten:</strong> $k €</p>";
         echo "</div>";
     }
@@ -40,12 +54,12 @@ class RechnerView {
             foreach ($berechnungen as $b) {
                 $preis = number_format($b['gesamtkosten'], 2, ',', '.');
                 echo "<tr>";
-                echo "<td>{$b['id']}</td>";
-                echo "<td>{$b['alter']}</td>";
-                echo "<td>{$b['dauer']}</td>";
-                echo "<td>{$b['zukunftsalter']}</td>";
-                echo "<td>{$preis} €</td>";
-                echo "<td>{$b['created_at']}</td>";
+                echo '<td>' . htmlspecialchars((string)$b['id']) . '</td>';
+                echo '<td>' . htmlspecialchars((string)$b['alter']) . '</td>';
+                echo '<td>' . htmlspecialchars((string)$b['dauer']) . '</td>';
+                echo '<td>' . htmlspecialchars((string)$b['zukunftsalter']) . '</td>';
+                echo '<td>' . $preis . ' €</td>';
+                echo '<td>' . htmlspecialchars((string)$b['created_at']) . '</td>';
                 echo "</tr>";
             }
             echo "</table>";

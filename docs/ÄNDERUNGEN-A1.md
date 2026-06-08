@@ -18,7 +18,12 @@
    - Neues Master-Validierungsskript für Projektbestand, darunter PHP-Syntax.
    - Schreibt `PROJECT_STATUS.md` mit Prüfergebnissen und Handlungsempfehlungen.
 
-3. `.github/BRANCHSTRATEGIE.md`
+3. `webapp/public/controllers/RechnerController.php`, `webapp/public/models/RechnerModel.php`, `webapp/public/views/RechnerView.php`, `webapp/public/layouts/content.php`
+   - MVC-Implementierung bereinigt: keine Layout-Includes in Model/Controller.
+   - Controller nutzt jetzt sichere POST-Validierung und kapselt Logik sauber.
+   - Fix: relative Includes mit `__DIR__` für stabile MVC-Dateien.
+
+4. `.github/BRANCHSTRATEGIE.md`
    - Branching-Strategie dokumentiert, inkl. `develop`-Branch und Release-Tagging.
 
 ## Nächste Schritte

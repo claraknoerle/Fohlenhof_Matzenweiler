@@ -303,6 +303,7 @@ Bei 100+ Routinen:
 
 - 20.05.2026: UI-Update am Kostenrechner — `views/RechnerView.php` überarbeitet; neue Client-Logik `webapp/public/js/rechner.js` hinzugefügt; ergänzende Styles in `webapp/public/css/styles.css`. Kurzbeschreibung und Begründung wurden in `docs/VERTEIDIGUNG.md` dokumentiert.
 - 20.05.2026 (später): Kostenrechner-Logik korrigiert — Berechnung läuft jetzt von **aktuellem Alter** des Fohlens bis **Zielalter am Ende der Aufzucht**, nicht vom Grundprinzip "Dauer von Geburt". Model: `RechnerModel.php` (berechneGesamtkosten: `(zielalter - alter) * 12 * 300€`), View-Labels umbenannt, JS-Validierung angepasst. Rechner visuell kompakter gemacht (max-width: 380px).
+- 08.06.2026: A1/D1-Fix dokumentiert — MVC-Cleanup in `webapp/public/controllers/RechnerController.php`, `webapp/public/models/RechnerModel.php`, `webapp/public/views/RechnerView.php`; Galerie erweitert in `webapp/public/Projekt_Fohlenhof Matzenweiler/layouts/content.php` und `webapp/public/Projekt_Fohlenhof Matzenweiler/layouts/galerie.php`; Standard-Bildordner `images/`, `img/`, `bilder/`, `assets/images/`, `assets/img/` vorbereitet.
 
 - **Wartbarkeits-Index** (Durchschnittsgröße, Komplexität)
 - **Abdeckungs-Rate** (Geplante vs. dokumentierte Routinen)

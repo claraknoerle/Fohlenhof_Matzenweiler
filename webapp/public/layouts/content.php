@@ -116,7 +116,7 @@ $angebote = [
 <section id="Rechner" class="content">
     <h3>Kostenrechner für Fohlenaufzucht</h3>
     <?php
-    require_once 'controllers/RechnerController.php';
+    require_once __DIR__ . '/../controllers/RechnerController.php';
     $controller = new RechnerController();
     $controller->starten();
     ?>

@@ -126,13 +126,24 @@ $angebote = [
     <h3>Bilder</h3>
     <div class="galerie">
         <?php
-        $bilder = glob("bild/*.jfif"); // Alle Bilder aus Ordner laden
-        if($bilder){
-            foreach($bilder as $bild){
-                echo '<img src="'.$bild.'" onclick="this.classList.toggle(\'zoom\')">'; // Klick = vergrößern
+        $verzeichnisse = ['images', 'img', 'bilder', 'bild'];
+        $bilder = [];
+        foreach ($verzeichnisse as $verzeichnis) {
+            $bilder = array_merge($bilder, glob($verzeichnis . '/*.{jfif,jpeg,jpg,png}', GLOB_BRACE) ?: []);
+        }
+        $bilder = array_unique($bilder);
+
+        if (!empty($bilder)) {
+            foreach ($bilder as $bild) {
+                $titel = pathinfo($bild, PATHINFO_FILENAME);
+                $alt = 'Foto vom Fohlenhof: ' . $titel;
+                echo '<figure class="gallery-item">';
+                echo '<img src="' . htmlspecialchars($bild) . '" alt="' . htmlspecialchars($alt) . '" onclick="this.classList.toggle(\'zoom\')">';
+                echo '<figcaption>' . htmlspecialchars($titel) . '</figcaption>';
+                echo '</figure>';
             }
         } else {
-            echo "<p>Keine .jfif Bilder im Ordner 'Bild' gefunden.</p>";
+            echo '<p>Keine Bilder in den Ordnern images, img, bilder oder bild gefunden.</p>';
         }
         ?>
     </div>
