@@ -2,13 +2,10 @@
 						<section class="content">
 							<h2>Stutfohlenaufzucht im Allgäu</h2>
 						</section>
-					
-						
-						
-						<section id="home" class ="content">
-							<h3>Home</h3>
-						
-							<h4> Willkommen auf unserem Fohlenhof in Kißlegg</h4>
+                    
+                </section>
+                <section id="Home" class="content"> 
+                    <h3>Home</h3>
 								<p>Wir sind eine Familie aus Kißlegg im Allgäu und haben unsere Leidenschaft in die Aufzucht von Stutfohlen gesteckt. Auf unserem Hof wachsen die jungen Pferde in ruhiger, natürlicher Umgebung auf, mit viel Platz für Bewegung und Entfaltung.</p>
 								<p>Wir legen Wert auf Respekt gegenüber den Tieren, bodenständige Arbeit und eine liebevolle Betreuung, damit die Fohlen gesund, ausgeglichen und gut sozialisiert groß werden.</p>
 								<p>Auf unserer Website erfahren Sie mehr über unsere Familie, unsere Philosophie und unsere tägliche Arbeit mit den Pferden. Lernen Sie Wolfgang, Julia, Clara, Linda und Frieda kennen und entdecken Sie, wie wir gemeinsam unseren Hof gestalten und unsere Leidenschaft für Pferde leben.</p>
@@ -115,14 +112,12 @@ $angebote = [
 
 <section id="Rechner" class="content">
     <h3>Kostenrechner für Fohlenaufzucht</h3>
-    <?php
-    require_once __DIR__ . '/../controllers/RechnerController.php';
+    <p>Bitte gib Alter und Zielalter als gültige Zahlen ein.</p>
+    <?php require_once __DIR__ . '/../controllers/RechnerController.php';
     $controller = new RechnerController();
     $controller->starten();
     ?>
 </section>
-<p></p>
-<p></p>
 <section id="Bilder" class="content"> <!-- Galerie -->
     <h3>Bilder</h3>
     <div class="galerie">

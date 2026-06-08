@@ -2,7 +2,7 @@
 
     <div class="header-title"> <!-- Container für Logo + Titel -->
 
-        <img src="../bild/Logo.png" alt="Logo" class="logo-img"> 
+        <img src="images/Logo.png" alt="Logo" class="logo-img"> 
         <!-- Logo-Bild (alt = Beschreibung für Barrierefreiheit/SEO) -->
 
         <h1>Fohlenhof Matzenweiler</h1> 

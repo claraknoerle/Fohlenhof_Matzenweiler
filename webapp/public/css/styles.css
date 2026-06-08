@@ -351,3 +351,29 @@ button:hover {
 .footer-legal-links {
     margin-top: 10px; /* Abstand nach oben */
 }
+.content#Rechner > p:first-of-type {
+    margin-bottom: 0; /* verhindert zusätzlichen Abstand unter dem Hinweis-Text */
+}
+
+/* Stelle sicher, dass die Bilder-Galerie unter dem Rechner angezeigt wird */
+#Bilder {
+    clear: both;
+}
+
+/* Sicherstellen, dass beim Springen zu Sektionen die Überschriften nicht von anderen Elementen verdeckt werden */
+#Bilder, #Rechner, .content {
+    scroll-margin-top: 120px; /* Platz für eventuelle fixe Header oder überlappende Elemente */
+}
+
+/* Stelle sicher, dass der Rechner nicht über der Überschrift liegt */
+.rechner-form {
+    position: relative;
+    z-index: 0; /* bleibt unter Überschriften */
+}
+
+/* Überschriften der Sektionen vor anderen Elementen sichtbar halten */
+.content h3 {
+    position: relative;
+    z-index: 9999; /* sehr hoch, damit Überschriften immer sichtbar sind */
+    background: transparent; /* falls Hintergrund nötig, kann hier Farbe gesetzt werden */
+}

@@ -86,6 +86,12 @@ img {
    object-fit: cover; /* Verhindert Verzerrung */
 }
 
+/* Bilder sollen über anderen Inhalten liegen, falls es Stacking-Probleme gibt */
+.galerie img, .gallery img, .gallery-item img {
+    position: relative;
+    z-index: 1;
+}
+
 
 .gallery-item img {
    width: 200px; /* feste Breite */

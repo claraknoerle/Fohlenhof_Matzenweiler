@@ -1,8 +1,8 @@
 <?php
-include ("head2.php") // Lädt den Kopfbereich der Website (z.B. <head>, CSS/JS Links, evtl. Navigation)//
+include ("head2.php"); // Lädt den Kopfbereich der Website (z.B. <head>, CSS/JS Links, evtl. Navigation)//
 ?>
 <?php
-include ("header2.php") // Lädt den Überschriftbereich der Website (z.B. <header>, CSS/JS Links, evtl. Navigation)//
+include ("header2.php"); // Lädt den Überschriftbereich der Website (z.B. <header>, CSS/JS Links, evtl. Navigation)//
 ?>
 <section>
 <h2> Verantwortlicher</h2> <!-- Titel des Abschnitts -->
@@ -23,5 +23,5 @@ include ("header2.php") // Lädt den Überschriftbereich der Website (z.B. <head
 <p>Beim Besuch dieser Website können verschiedene personenbezogene Daten erhoben werden. Personenbezogene Daten sind Daten, mit denen Sie persönlich identifiziert werden können.</p>
 </section>
 <?php
-include ("footer.php") // Lädt den Fußbereich der Website (z.B. <footer>, CSS/JS Links, evtl. Navigation)//
+include ("footer.php"); // Lädt den Fußbereich der Website (z.B. <footer>, CSS/JS Links, evtl. Navigation)//
 ?>

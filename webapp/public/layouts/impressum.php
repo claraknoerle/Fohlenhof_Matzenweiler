@@ -1,5 +1,5 @@
 <?php
-include ("head2.php") // Lädt den Kopfbereich der Website (z.B. <head>, CSS/JS Links, evtl. Navigation)//
+include ("head2.php"); // Lädt den Kopfbereich der Website (z.B. <head>, CSS/JS Links, evtl. Navigation)//
 ?>
 
 <?php 

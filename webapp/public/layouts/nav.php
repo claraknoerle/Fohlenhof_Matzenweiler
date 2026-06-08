@@ -4,7 +4,7 @@
         <input type="checkbox" id="menu-toggle"><!-- Unsichtbare Checkbox (wird per CSS versteckt)Steuert, ob das Menü geöffnet oder geschlossen ist -->
 
         <ul id="menu"> <!-- Liste mit den Navigationspunkten -->
-            <li><a href="#home">Home</a></li>
+            <li><a href="#Home">Home</a></li>
             <li><a href="#Über uns">Über uns</a></li>
              <li><a href="#Anlage">Anlage</a></li>
             <li><a href="#Team">Team</a></li>
