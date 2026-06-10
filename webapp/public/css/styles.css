@@ -1,7 +1,18 @@
+/**
+ * styles.css - Zentrale Stylesheet für Fohlenhof-Webseite
+ * 
+ * Design-Richtlinien:
+ * - Farben: Braun/Orange (#c27348) auf Schwarz (#000000)
+ * - Layout: Zentral ausgerichtet, max-width für große Bildschirme
+ * - Typografie: Arial, responsive Schriftgrößen
+ * - CSS-Architektur: Semantische Gliederung nach UI-Komponenten
+ */
+
 /* ===================================
    Zentrale Ausrichtung & Layout
    =================================== */
-   
+
+/* Standard-Styling für HTML und Body-Element */
 html, body {
     color: #c27348; /* Standardtextfarbe: Braun/Orange */
     background-color: #000000; /* Hintergrundfarbe schwarz */
@@ -11,143 +22,157 @@ html, body {
     text-align: center; /* Zentriert Texte standardmäßig */
 }
 
-/* Container-Zentrierung für den gesamten Inhalt */
+/* Hauptlayout: Zentrierte Container mit max-width */
 main, header, footer {
     max-width: 1000px; /* Begrenzt die Breite auf Desktops */
-    margin: 0 auto;    /* Das Geheimnis für die horizontale Zentrierung */
+    margin: 0 auto;    /* Horizontale Zentrierung (Key-Layout-Trick) */
     padding: 20px; /* Innenabstand */
 }
 
+/* Content-Container: Zusätzliche Zentrierung */
 .content {
-	margin: 0 auto ;/* Das Geheimnis für die horizontale Zentrierung */
+	margin: 0 auto; /* Horizontale Zentrierung */
 }
 
 /* ===================================
-   Tabelle
+   Tabelle - Styling für Datendarstellung
    =================================== */
 
+/* Wrapper für Tabellen mit Padding und Styling */
 .table-container {
-    max-width: 900px; /* Maximalbreite */
-    margin: 0 auto;/* Das Geheimnis für die horizontale Zentrierung */
+
+    max-width: 900px; /* Maximalbreite für Desktop */
+    margin: 0 auto; /* Horizontale Zentrierung */
     background: #000000; /* Schwarzer Hintergrund */
     padding: 20px; /* Innenabstand */
-    border-radius: 8px; /* Abgerundete Ecken */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Leichter Schatten */
+    border-radius: 8px; /* Abgerundete Ecken (moderne UI) */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Leichter Tiefenschatten */
 }
 
+/* Universeller Container mit Standardstyling */
 .container {
     max-width: 600px; /* Maximalbreite */
     margin: 0 auto; /* Zentriert horizontal */
-    background: #3b3b3b; /* Dunkelgrauer Hintergrund */
+    background: #3b3b3b; /* Dunkelgrauer Hintergrund (Kontrast) */
     padding: 20px; /* Innenabstand */
     border-radius: 8px; /* Abgerundete Ecken */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Schatten */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Schatten für Tiefe */
 }
 
+/* Tabellen-Basis-Styling */
 table {
-     width: 100%; /* Tabelle füllt Container */
-    border-collapse: collapse; /* Vermeidet doppelte Rahmen */
-    margin: center;/* Zentriert horizontal */
+    width: 100%; /* Tabelle füllt Parent-Container */
+    border-collapse: collapse; /* Verhindert doppelte Zellrahmen */
+    margin: auto; /* Horizontale Zentrierung */
 }
 
+/* Tabellen-Header: Dunkler Hintergrund mit Kontrast */
 th {
-    background-color: #3b3b3b; /* Dunkelgrau */
-    color:#c27348; /* Textfarbe Braun/Orange */
+    background-color: #3b3b3b; /* Dunkelgrau - Hervorhebung */
+    color: #c27348; /* Textfarbe Braun/Orange */
     text-align: left; /* Text linksbündig */
     padding: 12px; /* Innenabstand */
     font-size: 16px; /* Schriftgröße */
+    font-weight: bold; /* Fetter Text für Header */
 }
 
+/* Tabellen-Zellen: Standardformatierung mit Bottom-Border */
 td {
     padding: 12px; /* Innenabstand */
-    border-bottom: 1px solid #c27348; /* Untere Linie */
+    border-bottom: 1px solid #c27348; /* Trennlinie unter jeder Zeile */
     font-size: 14px; /* Schriftgröße */
 }
 
+/* Preis-Hervorhebung: Fett und Braun */
 .price-tag {
-   font-weight: bold; /* Fett für Preise */
+    font-weight: bold; /* Fett für optische Betonung */
     color: #c27348; /* Orange für Hervorhebung */
-    white-space: nowrap; /* Keine Zeilenumbrüche */
+    white-space: nowrap; /* Verhindert Zeilenumbruch in Preisen */
 }
 
+/* Badge: Kleine Etiketten für Kategorien */
 .badge {
     font-size: 0.85em; /* Etwas kleinere Schrift */
     padding: 4px 8px; /* Innenabstand */
-    border-radius: 4px; /* Abgerundete Ecken */
+    border-radius: 4px; /* Abgerundete Ecken (moderne UI) */
     color: #c27348; /* Braun/Orange */
 }
 
+/* Small-Text: Meta-Informationen */
 small {
-    font-size: 12px; /* Kleine Schrift */
+    font-size: 12px; /* Kleine Schrift für Nebentext */
     color: #c27348; /* Braun/Orange */
 }
 
 /* ===================================
    Header & Logo
    =================================== */
-   
+
+/* Header-Titel: Flexbox-Container für Logo + Text */
 .header-title {
-    display: flex; /* Flexbox für Ausrichtung */
-    flex-direction: column; /* Logo über Text */
-    align-items: center; /* Zentriert Inhalte horizontal */
-    gap: 10px; /* Abstand zwischen Logo und Text */
+    display: flex; /* Flexbox-Ausrichtung */
+    flex-direction: column; /* Vertikale Anordnung (Logo über Text) */
+    align-items: center; /* Zentriert Kinder horizontal */
+    gap: 10px; /* Abstand zwischen Logo und Textbereich */
 }
 
+/* Logo-Bild: Responsive Höhe */
 .logo-img {
-   height: 180px; /* Höhe des Logos */
-   width: auto; /* Breite automatisch proportional */
+    height: 180px; /* Feste Höhe */
+    width: auto; /* Breite automatisch proportional (Aspect Ratio beibehalten) */
 }
 
 /* ===================================
    Navigation & Toggle System
    =================================== */
-   
+
+/* Navigation Bar: Braunes Header-Element */
 .navigation {
-    background-color: #c27348; /* Hintergrundfarbe Navigation */
+    background-color: #c27348; /* Braun/Orange-Hintergrund */
     margin-top: 20px; /* Abstand nach oben */
 }
 
-/* Menü-Liste (Desktop: nebeneinander) */
+/* Menü-Liste: Horizontal angeordnet (Desktop-Layout) */
 #menu {
     list-style: none; /* Entfernt Standard-Aufzählungszeichen */
-    padding: 0; /* Entfernt Padding */
-    display: flex; /* Horizontale Menüanordnung */
+    padding: 0; /* Entfernt Default-Padding */
+    display: flex; /* Horizontale Flexbox-Anordnung */
     justify-content: center; /* Zentriert Menüpunkte */
 }
 
+/* Menü-Links: Styling für Navigation */
 #menu li a {
-    text-decoration: none;
-    color: black;
-    padding: 10px 20px;
-    display: block;
-    font-weight: bold;
+    text-decoration: none; /* Unterstrich entfernen */
+    color: black; /* Schwarzer Text auf braunem Hintergrund */
+    padding: 10px 20px; /* Innenabstand */
+    display: block; /* Block-Element für bessere Clickable-Area */
+    font-weight: bold; /* Fetter Text */
 }
 
-/* Toggle-Elemente verstecken */
+/* Toggle-Elemente: Versteckt auf Desktop (für Mobile-Responsive) */
 #menu-toggle, .hamburger {
     display: none; /* Auf Desktops unsichtbar */
 }
 
 /* ===================================
-   Rechner
+   Rechner-Formular
    =================================== */
 
-.container {
-    max-width: 500px; /* Maximalbreite */
-    margin: 0 auto; /* Zentriert horizontal */
-    background: #3b3b3b; /* Dunkelgrau */
-    padding: 20px; /* Innenabstand */
-    border-radius: 8px; /* Abgerundete Ecken */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Schatten */
-}
+/* Container für Kalkulator: Siehe oben (wiederverwendbar) */
+
+/* Label-Text: Standardformatierung */
 label {
-    font-size: 16px;
+    font-size: 16px; /* Lesbare Schriftgröße */
+    display: block; /* Jedes Label auf eigener Zeile */
+    margin-bottom: 8px; /* Abstand zum Input */
 }
+
+/* Input-Felder & Buttons: Einheitliches Styling */
 input, button {
     padding: 10px; /* Innenabstand */
-    margin: 10px 0; /* Außenabstand */
+    margin: 10px 0; /* Außenabstand (oben/unten) */
     font-size: 15px; /* Schriftgröße */
-    border-radius: 8px; /* Abgerundete Ecken */
+    border-radius: 8px; /* Abgerundete Ecken (modern) */
     border: 1px solid #ccc; /* Grauer Rahmen */
 }
 

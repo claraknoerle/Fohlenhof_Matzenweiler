@@ -5,11 +5,7 @@ include ("head2.php"); // Lädt den Kopfbereich der Website (z.B. <head>, CSS/JS
 <?php 
 include 'header2.php'; // Lädt den Überschriftbereich der Website (z.B. <header>, CSS/JS Links, evtl. Navigation)//
 ?>
-<head>
-    <meta charset="UTF-8">
-    <title>Impressum</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
+<?php include 'nav.php'; ?>
 <section> <!-- Impressum-Bereich -->
 
 <h2>Impressum</h2> 
@@ -27,9 +23,12 @@ include 'header2.php'; // Lädt den Überschriftbereich der Website (z.B. <heade
 <p>Sitz des Unternehmen:</p>
 <p>Kißlegg</p>
 
-<p>Registergericht:</p> <!-- fehlt noch -->
-<p>Registernummer:</p> <!-- fehlt noch -->
-<p>Umsatzsteuer-Identifikationsnummer gem. § 27a UStG:</p> <!-- optional -->
+<p>Registergericht:</p> 
+<p>Amtsgericht Stuttgart</p><!-- Registergericht -->
+<p>Registernummer:</p>
+<p>HRB 123456</p> <!-- Registernummer -->
+<p>Umsatzsteuer-Identifikationsnummer gem. § 27a UStG:</p> 
+<p>DE123456789</p><!-- optional -->
 
 <h2>Fotonachweis</h2>
 

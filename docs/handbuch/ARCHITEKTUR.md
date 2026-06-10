@@ -82,6 +82,7 @@ Für Website-Komponenten, die in verschachtelten Layout-Ordnern liegen, wird die
 
 - `footer.php` stellt sicher, dass Links wie `#Home` aus `layouts/impressum.php` und `layouts/datenschutz.php` zurück zur Hauptseite `index.php` führen.
 - Diese Logik vermeidet defekte Anker-Links, wenn Seiten aus dem `layouts/`-Verzeichnis geladen werden.
+- Die rechtlichen Seiten `Impressum` und `Datenschutz` verwenden denselben Basis-Pfad, damit die Verlinkung zwischen diesen Seiten zuverlässig funktioniert.
 
 ### 2.3 Kategorisierung nach Zeithorizont
 

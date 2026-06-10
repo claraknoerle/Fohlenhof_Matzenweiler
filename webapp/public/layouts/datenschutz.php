@@ -4,6 +4,7 @@ include ("head2.php"); // Lädt den Kopfbereich der Website (z.B. <head>, CSS/JS
 <?php
 include ("header2.php"); // Lädt den Überschriftbereich der Website (z.B. <header>, CSS/JS Links, evtl. Navigation)//
 ?>
+<?php include 'nav.php'; ?>
 <section>
 <h2> Verantwortlicher</h2> <!-- Titel des Abschnitts -->
 

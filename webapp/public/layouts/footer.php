@@ -1,6 +1,7 @@
 <footer class="main-footer"> 
     <?php
         $footerBase = (strpos($_SERVER['SCRIPT_NAME'], '/layouts/') !== false) ? '../index.php' : '';
+        $legalBase = (strpos($_SERVER['SCRIPT_NAME'], '/layouts/') !== false) ? '../' : '';
     ?>
     <div class="footer-container">
         
@@ -40,8 +41,8 @@
         <p><i>Unsere Website befindet sich im Aufbau!</i></p> <!-- Info-Text -->
 <div class="footer-legal-links">  <!-- Impressum & Datenschutz -->
 
-<a href="layouts/impressum.php">Impressum</a>
-<a href="layouts/datenschutz.php">Datenschutz</a>
+<a href="<?php echo $legalBase; ?>layouts/impressum.php">Impressum</a>
+<a href="<?php echo $legalBase; ?>layouts/datenschutz.php">Datenschutz</a>
     </div>
     </div>
 </footer>

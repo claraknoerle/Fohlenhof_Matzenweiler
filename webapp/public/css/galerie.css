@@ -1,7 +1,18 @@
-@CHARSET "UTF-8";
-
-/*Benutzerdefinierte Box (Klasse)*/
-.gallery{
+/**
+ * galerie.css - Galerie-Styling für Bilddarstellung
+ * 
+ * Funktionalität:
+ * - Bildgalerie mit Flexbox/Grid-Layout
+ * - Hover-Effekte und Zoomfunktion
+ * - Responsive Bildanpassung (object-fit)
+ * - Browser-kompatible Vendor-Präfixe für Transitions
+ * 
+ * Komponenten:
+ * - .gallery: Hauptgalerie-Container (Flexbox)
+ * - .galerie: Grid-basierte Galerie (2-spaltig)
+ * - .gallery-item: Einzelne Galerie-Elemente
+ * - .zoom / .gross: Vergrößerte Bilddarstellung
+ */\n\n@CHARSET "UTF-8";\n\n/**\n * Galerie-Container: Flexbox mit Zeilenumbruch\n * Zentriert Bilder horizontal mit definierten Abständen\n */\n.gallery{
 	display: flex;/* Flexbox-Layout aktivieren */	
 	justify-content: center;/* Platz zwischen den Spalten aufteilen */
 	gap: 15px;/* Abstand zwischen den Bildern */
@@ -9,10 +20,18 @@
 	flex-wrap: wrap; /* Hier wird der Umbruch aktiviert */
 }
 
+/* Link in Galerie: Block-Element für bessere Clickable-Area */
 .gallery a{
-	display: block;/*Display: Blockelement*/
+	display: block; /* Block-Element für optimale Hit-Area */
 }
 
+/**
+ * Galeriebilder: Basisstile mit Animationen
+ * - Transitions für sanfte Übergänge
+ * - Vendor-Präfixe für Browser-Kompatibilität (Firefox, Opera, Webkit)
+ * - Box-Shadow für Tiefeneffekt
+ * - object-fit für proportionale Bildanpassung
+ */
 .gallery img{
 	transition: 1s;	/* Transition/Verzögerung für weiche Übergänge */
 	-moz-transition: 1s;/*Transition (Eigenschaftswechsel) für den Firefox: 1 Sekunde*/
@@ -31,9 +50,12 @@
 	object-fit: cover; /* Bild proportional zuschneiden, Container füllen */
 	cursor: pointer; /* Mauszeiger zeigt Klickbarkeit */
 }
-/* Grundlayout: 2 Spalten nebeneinander */
+/**
+ * Galerie-Grid: 2-spaltige Rasteranordnung
+ * Responsive Grid-Layout für optimale Bildpräsentation
+ */
 .galerie {
-    display: grid; /* Rasterlayout */
+    display: grid; /* Rasterlayout (CSS Grid) */
     grid-template-columns: 1fr 1fr; /* genau zwei gleich große Spalten */
     gap: 10px; /* Abstand zwischen Bildern */
     padding: 10px; /* Abstand vom Rand */
@@ -49,61 +71,86 @@ img {
     transition: transform 0.2s; /* Animation bei Transformation */
 }
  
-/* Stil für das vergrößerte Bild */
+/**
+ * Zoom-Effekt: Vergrößerte Bilddarstellung
+ * Wird z.B. bei Modalöffnung angewendet für große Bildvorschau
+ */
 .zoom {
     top: 0; /* oben ausrichten */
     left: 0; /* links ausrichten */
-    width: 500px; /* vergrößert */
+    width: 500px; /* vergrößerte Breite */
     height: auto; /* Höhe proportional */
     object-fit: contain; /* ganzes Bild sichtbar, kein Beschnitt */
-    background-color: rgba(0,0,0,0.9); /* dunkler Hintergrund */
+    background-color: rgba(0,0,0,0.9); /* dunkler halbtransparenter Hintergrund */
     z-index: 1000; /* über anderen Elementen */
     border-radius: 0; /* keine abgerundeten Ecken */
 }
- /* Das Bild im normalen Zustand */
+ 
+/**
+ * .bild - Bild im normalen Zustand mit Transition
+ */
 .bild {
             width: 300px;
             cursor: pointer;
             transition: width 0.3s; /* Macht die Vergrößerung flüssig */
         }
  
-        /* Das Bild, wenn es die Klasse "gross" hat */
+/**
+ * .gross - Vergrößerte Bildklasse (Hover/Active-Zustand)
+ */
         .gross {
             width: 800px;
         }
+        
 /* ===================================
    Bilder-Galerie zentrieren
    =================================== */
-/* Galerie Grid */
+   
+/**
+ * Sekundärer Gallery-Container: Alternative Flexbox-Anordnung
+ */
 .gallery {
     display: flex; /* Flexbox */
-    flex-wrap: wrap; /* Zeilenumbruch */
+    flex-wrap: wrap; /* Zeilenumbruch bei Platzmangel */
     justify-content: center; /* horizontal zentriert */
     gap: 10px; /* Abstand zwischen Bildern */
     padding: 20px; /* Innenabstand */
 }
+
+/* Gallery-Bilder: Proportionale Anpassung */
 .gallery img {
-   object-fit: cover; /* Verhindert Verzerrung */
+   object-fit: cover; /* Verhindert Verzerrung, schneidet proportional zu */
 }
 
-/* Bilder sollen über anderen Inhalten liegen, falls es Stacking-Probleme gibt */
+/**
+ * Z-Index-Management: Bilder über anderen Elementen
+ * Verhindert Stacking-Probleme bei überlagerten Elementen
+ */
 .galerie img, .gallery img, .gallery-item img {
     position: relative;
-    z-index: 1;
+    z-index: 1; /* über Default-Elementen */
 }
 
-
+/**
+ * Gallery-Item-Bilder: Rahmen und Hover-Effekt
+ * - Feste Größe 200x200px
+ * - Braun/Orange-Rahmen als Designelement
+ * - Scale-Transformation auf Hover
+ */
 .gallery-item img {
    width: 200px; /* feste Breite */
     height: 200px; /* feste Höhe */
-    object-fit: cover; /* Bild proportional */
-    border: 2px solid #c27348; /* Rahmenfarbe */
+    object-fit: cover; /* Bild proportional anpassen */
+    border: 2px solid #c27348; /* Rahmen: Braun/Orange (Theme-Farbe) */
     transition: transform 0.3s ease; /* sanfte Hover-Animation */
     cursor: pointer; /* anklickbar */
 }
 
+/**
+ * Hover-Effekt: Leichte Vergrößerung beim Mouseover
+ */
 .gallery-item img:hover {
-    transform: scale(1.05); /* Leichte Vergrößerung beim Hover */
+    transform: scale(1.05); /* Leichte Vergrößerung (5%) beim Hover */
 }
 
 
