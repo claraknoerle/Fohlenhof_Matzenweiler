@@ -1,4 +1,7 @@
 <footer class="main-footer"> 
+    <?php
+        $footerBase = (strpos($_SERVER['SCRIPT_NAME'], '/layouts/') !== false) ? '../index.php' : '';
+    ?>
     <div class="footer-container">
         
         <div class="footer-section"> <!-- Enthält Name, Adresse, Kontakt & Social Media -->
@@ -20,13 +23,13 @@
             
             <ul class="footer-menu">  <!-- Liste mit Seiten-Links -->
             
-                <li><a href="#home" class="footer-link">Home</a></li>
-                <li><a href="#Über uns" class="footer-link">Über uns</a></li>
-                <li><a href="#Anlage" class="footer-link">Anlage</a></li>
-                <li><a href="#Team" class="footer-link">Team</a></li>
-                <li><a href="#Angebote" class="footer-link">Angebote</a></li>
-                <li><a href="#Bilder" class="footer-link">Bilder</a></li>
-                <li><a href="#Kontakt" class="footer-link">Kontakt</a></li>
+                <li><a href="<?php echo $footerBase; ?>#Home" class="footer-link">Home</a></li>
+                <li><a href="<?php echo $footerBase; ?>#Über uns" class="footer-link">Über uns</a></li>
+                <li><a href="<?php echo $footerBase; ?>#Anlage" class="footer-link">Anlage</a></li>
+                <li><a href="<?php echo $footerBase; ?>#Team" class="footer-link">Team</a></li>
+                <li><a href="<?php echo $footerBase; ?>#Angebote" class="footer-link">Angebote</a></li>
+                <li><a href="<?php echo $footerBase; ?>#Bilder" class="footer-link">Bilder</a></li>
+                <li><a href="<?php echo $footerBase; ?>#Kontakt" class="footer-link">Kontakt</a></li>
                 
             </ul>
         </div>

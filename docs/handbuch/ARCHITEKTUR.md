@@ -76,6 +76,13 @@ Was ist das Ergebnis dieser Routine?
 - Beispiel-Implementierung in `templates/beispiel-routine.md`
 - Spezialvorlagen für unterschiedliche Routine-Typen (Code, Prozess, Analyse)
 
+### 2.2.1 Footer-Navigation und rechtliche Seiten
+
+Für Website-Komponenten, die in verschachtelten Layout-Ordnern liegen, wird die Footer-Navigation mit einem relativen Basis-Pfad gesteuert.
+
+- `footer.php` stellt sicher, dass Links wie `#Home` aus `layouts/impressum.php` und `layouts/datenschutz.php` zurück zur Hauptseite `index.php` führen.
+- Diese Logik vermeidet defekte Anker-Links, wenn Seiten aus dem `layouts/`-Verzeichnis geladen werden.
+
 ### 2.3 Kategorisierung nach Zeithorizont
 
 ```
